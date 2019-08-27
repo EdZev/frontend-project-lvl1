@@ -1,6 +1,6 @@
 {
   "name": "edhexlet2",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Hexlet first project",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "dist"
   ],
   "bin": {
-    "brine-games": "./src/bin/brine-games.js"
+    "brain-games": "./src/bin/braine-games.js",
+    "brain-even": "./src/bin/braine-even.js"
   },
   "author": "edzev",
   "license": "ISC",
