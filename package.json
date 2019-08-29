@@ -1,6 +1,6 @@
 {
   "name": "edhexlet2",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Hexlet first project",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,13 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdZev/frontend-project-lvl1.git"
+  },
   "bin": {
-    "brain-games": "./src/bin/braine-games.js",
-    "brain-even": "./src/bin/braine-even.js"
+    "brain-games": "src/bin/braine-games.js",
+    "brain-even": "src/bin/braine-even.js"
   },
   "author": "edzev",
   "license": "ISC",
