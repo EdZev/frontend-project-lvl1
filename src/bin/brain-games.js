@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { greeting, introduce } from '../index';
+import { entrance } from '../games/games';
 
-greeting();
-introduce();
+entrance();

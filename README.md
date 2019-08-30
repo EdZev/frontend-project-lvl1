@@ -4,4 +4,6 @@
 
 [![Build Status](https://travis-ci.org/EdZev/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/EdZev/frontend-project-lvl1)
 
-<a href="https://asciinema.org/a/r8pvT0kffjSoeLiRIAijBZpc0" target="_blank"><img src="https://asciinema.org/a/r8pvT0kffjSoeLiRIAijBZpc0.svg" /></a>
+<a href="https://asciinema.org/a/1U72WVgEPq9CqMrlfErKFcNxb" target="_blank"><img src="https://asciinema.org/a/1U72WVgEPq9CqMrlfErKFcNxb.svg" /></a>
+
+<a href="https://asciinema.org/a/2Au6rsjLmLOV092NOlGBfPbkT" target="_blank"><img src="https://asciinema.org/a/2Au6rsjLmLOV092NOlGBfPbkT.svg" /></a>
