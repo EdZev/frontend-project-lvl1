@@ -10,13 +10,13 @@ const questionAndRightAnswer = () => {
   let questionAnswer;
   switch (mathSign) {
     case 0:
-      questionAnswer = [`${num1} - ${num2}`, String(num1 - num2)];
+      questionAnswer = [`${num1} - ${num2}`, `${num1 - num2}`];
       break;
     case 1:
-      questionAnswer = [`${num1} + ${num2}`, String(num1 + num2)];
+      questionAnswer = [`${num1} + ${num2}`, `${num1 + num2}`];
       break;
     default:
-      questionAnswer = [`${Math.round(num1 / 10)} * ${num2}`, String(Math.round(num1 / 10) * num2)];
+      questionAnswer = [`${Math.round(num1 / 10)} * ${num2}`, `${Math.round(num1 / 10) * num2}`];
       break;
   }
   return questionAnswer;
