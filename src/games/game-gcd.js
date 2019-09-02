@@ -1,20 +1,19 @@
+import { cons, car, cdr } from '@hexlet/pairs';
 import { number, engine } from '../index';
 
 
 const condition = 'Find the greatest common divisor of given numbers.';
 
-const devider = (num1, num2) => {
-  const larger = (num1 > num2) ? num1 : num2;
-  const less = (num1 < num2) ? num1 : num2;
-  if (less === 0) return larger;
-  return devider(less, larger % less);
+const devider = (num) => {
+  const pair = (car(num) > cdr(num)) ? cons(cdr(num), car(num)) : num;
+  if (car(pair) === 0) return cdr(pair);
+  return devider(cons(car(pair), cdr(pair) % car(pair)));
 };
 
 const greatestCommonDivisor = () => {
-  const num1 = number();
-  const num2 = number();
-  if (num1 === 0 || num2 === 0) return greatestCommonDivisor();
-  const result = [`${num1} ${num2}`, `${devider(num1, num2)}`];
+  const numbers = cons(number(), number());
+  if (car(numbers) === 0 || cdr(numbers) === 0) return greatestCommonDivisor();
+  const result = cons(`${car(numbers)} ${cdr(numbers)}`, `${devider(numbers)}`);
   return result;
 };
 

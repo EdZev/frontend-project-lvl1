@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { cons, car, cdr, toString } from '@hexlet/pairs';
 
 export const greeting = (condition) => {
   console.log('Welcome to the Brain Games!');
@@ -14,11 +15,11 @@ export const engine = (condition, qara) => {
   const gamerName = greeting(condition);
   for (let i = 0; i < 3; i += 1) {
     const questionAnswer = qara();
-    console.log(`Question: ${questionAnswer[0]}`);
+    console.log(`Question: ${car(questionAnswer)}`);
     const answeGamer = readlineSync.question('Your answer: ');
-    if (questionAnswer[1] !== answeGamer) {
-      console.log(`"${answeGamer}" is wrong answer ;(. Correct answer was "${questionAnswer[1]}".`);
-      return console.log("Let's try again");
+    if (cdr(questionAnswer) !== answeGamer) {
+      console.log(`"${answeGamer}" is wrong answer ;(. Correct answer was "${cdr(questionAnswer)}".`);
+      return console.log(`Let's try again, ${gamerName}!`);
     }
     console.log('Correct!');
   }
