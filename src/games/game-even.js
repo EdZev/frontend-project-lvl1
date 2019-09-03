@@ -1,10 +1,10 @@
 import { cons } from '@hexlet/pairs';
-import { number, engine } from '../index';
+import { randomNumber, engine } from '../index';
 
 const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const questionAndRightAnswer = () => {
-  const question = number();
+  const question = randomNumber();
   const answer = (question % 2 === 0) ? 'yes' : 'no';
   return cons(question, answer);
 };

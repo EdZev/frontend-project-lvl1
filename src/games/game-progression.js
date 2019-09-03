@@ -1,5 +1,5 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import { number, engine } from '../index';
+import { randomNumber, engine } from '../index';
 
 const condition = 'What number is missing in the progression?';
 
@@ -12,7 +12,7 @@ const positionOrStep = () => {
 const progression = () => {
   const posAndStep = cons(positionOrStep(), positionOrStep());
   const question = [];
-  let benchmark = (number());
+  let benchmark = (randomNumber());
   let rightAnsver = '';
   for (let i = 0; i < 10; i += 1) {
     if (i === car(posAndStep)) {

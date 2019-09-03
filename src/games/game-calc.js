@@ -1,5 +1,5 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import { number, engine } from '../index';
+import { randomNumber, engine } from '../index';
 
 const condition = 'What is the result of the expression?';
 
@@ -15,7 +15,7 @@ const mathSign = (num) => {
 };
 
 const questionAndRightAnswer = () => {
-  const numbers = cons(number(), number());
+  const numbers = cons(randomNumber(), randomNumber());
   const signAndAnswer = mathSign(numbers);
   const question = `${car(numbers)} ${car(signAndAnswer)} ${cdr(numbers)}`;
   return cons(question, `${cdr(signAndAnswer)}`);

@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { number, engine } from '../index';
+import { randomNumber, engine } from '../index';
 
 const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -11,7 +11,7 @@ const calculator = (question) => {
 };
 
 const prime = () => {
-  const question = number();
+  const question = randomNumber();
   const answer = (calculator(question)) ? 'yes' : 'no';
   return cons(question, answer);
 };

@@ -9,7 +9,7 @@ export const greeting = (condition) => {
   return userName;
 };
 
-export const number = () => Math.round(Math.random() * 100);
+export const randomNumber = () => Math.round(Math.random() * 100);
 
 export const engine = (condition, qara) => {
   const gamerName = greeting(condition);
