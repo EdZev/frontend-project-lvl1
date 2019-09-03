@@ -16,9 +16,9 @@ export const engine = (condition, qara) => {
   for (let i = 0; i < 3; i += 1) {
     const questionAnswer = qara();
     console.log(`Question: ${car(questionAnswer)}`);
-    const answeGamer = readlineSync.question('Your answer: ');
-    if (cdr(questionAnswer) !== answeGamer) {
-      console.log(`"${answeGamer}" is wrong answer ;(. Correct answer was "${cdr(questionAnswer)}".`);
+    const answerGamer = readlineSync.question('Your answer: ');
+    if (cdr(questionAnswer) !== answerGamer) {
+      console.log(`"${answerGamer}" is wrong answer ;(. Correct answer was "${cdr(questionAnswer)}".`);
       return console.log(`Let's try again, ${gamerName}!`);
     }
     console.log('Correct!');

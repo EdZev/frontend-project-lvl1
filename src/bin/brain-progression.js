@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import prime from '../games/game-prime';
+import progression from '../games/game-progression';
 
-prime();
+progression();

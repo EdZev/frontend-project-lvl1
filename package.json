@@ -1,7 +1,7 @@
 {
   "name": "edhexlet2",
-  "version": "3.1.0",
-  "description": "Hexlet first project",
+  "version": "3.1.1",
+  "description": "My first project on Hexlet",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,6 +15,11 @@
     "type": "git",
     "url": "git+https://github.com/EdZev/frontend-project-lvl1.git"
   },
+  "keywords": [
+    "games",
+    "brainGames",
+    "gamesForbrain"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
@@ -23,7 +28,7 @@
     "brain-progression": "dist/bin/brain-progression.js",
     "brain-prime": "dist/bin/brain-prime.js"
   },
-  "author": "edzev",
+  "author": "Edzev",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.5.5",

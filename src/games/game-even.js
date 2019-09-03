@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import { number, engine } from '../index';
 
-const condition = 'Answer "yes" if number even otherwise answer "no".';
+const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const questionAndRightAnswer = () => {
   const question = number();

@@ -5,7 +5,8 @@ const condition = 'What number is missing in the progression?';
 
 const positionOrStep = () => {
   const result = Math.round(Math.random() * 10);
-  return (result !== 0) ? result - 1 : positionOrStep;
+  console.log(result);
+  return (result > 2) ? result : positionOrStep();
 };
 
 const progression = () => {
