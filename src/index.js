@@ -1,27 +1,32 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
+import { getNameGamer } from './utils';
 
-export const greeting = (condition) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(`${condition}\r\n`);
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello! ${userName}!\r\n`);
-  return userName;
+const getAnswerGamer = (question) => {
+  console.log(`Question: ${question}`);
+  const answerGamer = readlineSync.question('Your answer: ');
+  return answerGamer;
 };
 
-export const randomNumber = () => Math.round(Math.random() * 100);
+const outputMessageAboutError = (answerGamer, rightAnswer, nameGamer) => {
+  console.log(`"${answerGamer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
+  console.log(`Let's try again, ${nameGamer}!`);
+};
 
-export const engine = (condition, qara) => {
-  const gamerName = greeting(condition);
-  for (let i = 0; i < 3; i += 1) {
-    const questionAnswer = qara();
-    console.log(`Question: ${car(questionAnswer)}`);
-    const answerGamer = readlineSync.question('Your answer: ');
+const outputCoorect = () => console.log('Correct!');
+
+const outputCongratulations = (nameGamer) => console.log(`Congratulations, ${nameGamer}!`);
+
+export default (gameCondition, getQuestionAndRightAnswer) => {
+  const nameGamer = getNameGamer(gameCondition);
+  const numberRounds = 3;
+  for (let i = 0; i < numberRounds; i += 1) {
+    const questionAnswer = getQuestionAndRightAnswer();
+    const answerGamer = getAnswerGamer(car(questionAnswer));
     if (cdr(questionAnswer) !== answerGamer) {
-      console.log(`"${answerGamer}" is wrong answer ;(. Correct answer was "${cdr(questionAnswer)}".`);
-      return console.log(`Let's try again, ${gamerName}!`);
+      return outputMessageAboutError(answerGamer, cdr(questionAnswer), nameGamer);
     }
-    console.log('Correct!');
+    outputCoorect();
   }
-  return console.log(`Congratulations, ${gamerName}!`);
+  return outputCongratulations(nameGamer);
 };

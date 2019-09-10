@@ -1,3 +1,3 @@
-import { greeting } from '../index';
+import { getNameGamer } from '../utils';
 
-export const entrance = () => greeting("");
+export default () => getNameGamer();
