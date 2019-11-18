@@ -1,18 +1,27 @@
 import { l, random } from '@hexlet/pairs-data';
-import { cons, car, cdr } from '@hexlet/pairs';
-import startEngine from '../index';
-import { getRandomNumber } from '../utils';
+import { cons } from '@hexlet/pairs';
+import playGame from '..';
+import getRandomInteger from '../utils';
 
-const condition = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
 
-const playCalc = () => {
-  const num = cons(getRandomNumber(), getRandomNumber());
-  const listOperations = l(
-    cons(`${car(num)} + ${cdr(num)}`, `${car(num) + cdr(num)}`),
-    cons(`${car(num)} - ${cdr(num)}`, `${car(num) - cdr(num)}`),
-    cons(`${car(num)} * ${cdr(num)}`, `${car(num) * cdr(num)}`),
-  );
-  return random(listOperations);
+const makeCalc = (num1, num2, sign) => {
+  switch (sign) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    default:
+      return num1 * num2;
+  }
 };
 
-export default () => startEngine(condition, playCalc);
+const getConditions = () => {
+  const operand1 = getRandomInteger();
+  const operand2 = getRandomInteger();
+  const listOperations = l('+', '-', '*');
+  const operation = random(listOperations);
+  return cons(`${operand1} ${operation} ${operand2}`, `${makeCalc(operand1, operand2, operation)}`);
+};
+
+export default () => playGame(task, getConditions);

@@ -1,15 +1,15 @@
 import { cons } from '@hexlet/pairs';
-import startEngine from '../index';
-import { getRandomNumber } from '../utils';
+import playGame from '..';
+import getRandomInteger from '../utils';
 
-const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
-const playEven = () => {
-  const numberForQuestion = getRandomNumber();
-  const answer = (isEven(numberForQuestion)) ? 'yes' : 'no';
-  return cons(`${numberForQuestion}`, answer);
+const getConditions = () => {
+  const question = getRandomInteger();
+  const answer = (isEven(question)) ? 'yes' : 'no';
+  return cons(question, answer);
 };
 
-export default () => startEngine(condition, playEven);
+export default () => playGame(task, getConditions);

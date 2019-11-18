@@ -1,32 +1,24 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
-import { getNameGamer } from './utils';
 
-const getAnswerGamer = (question) => {
-  console.log(`Question: ${question}`);
-  const answerGamer = readlineSync.question('Your answer: ');
-  return answerGamer;
-};
-
-const outputMessageAboutError = (answerGamer, rightAnswer, nameGamer) => {
-  console.log(`"${answerGamer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
-  console.log(`Let's try again, ${nameGamer}!`);
-};
-
-const outputCoorect = () => console.log('Correct!');
-
-const outputCongratulations = (nameGamer) => console.log(`Congratulations, ${nameGamer}!`);
-
-export default (gameCondition, getQuestionAndRightAnswer) => {
-  const nameGamer = getNameGamer(gameCondition);
-  const numberRounds = 3;
-  for (let i = 0; i < numberRounds; i += 1) {
-    const questionAnswer = getQuestionAndRightAnswer();
-    const answerGamer = getAnswerGamer(car(questionAnswer));
-    if (cdr(questionAnswer) !== answerGamer) {
-      return outputMessageAboutError(answerGamer, cdr(questionAnswer), nameGamer);
+export default (task, getCondition) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(task);
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello! ${userName}!\r\n`);
+  const roundsCount = 3;
+  for (let i = 0; i < roundsCount; i += 1) {
+    const conditions = getCondition();
+    const question = car(conditions);
+    const correctAnswer = cdr(conditions);
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (correctAnswer !== userAnswer) {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
-    outputCoorect();
+    console.log('Correct!');
   }
-  return outputCongratulations(nameGamer);
+  console.log(`Congratulations, ${userName}!`);
 };

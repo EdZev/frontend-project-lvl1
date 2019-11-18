@@ -1,23 +1,23 @@
 import { cons } from '@hexlet/pairs';
-import startEngine from '../index';
-import { getRandomNumber } from '../utils';
+import playGame from '..';
+import getRandomInteger from '../utils';
 
 
-const condition = 'Find the greatest common divisor of given numbers.';
+const task = 'Find the greatest common divisor of given numbers.';
 
-const getDenom = (firstNum, secondNum) => {
-  const lowerNum = (firstNum > secondNum) ? secondNum : firstNum;
-  const greaterNum = (firstNum < secondNum) ? secondNum : firstNum;
-  if (lowerNum === 0) return greaterNum;
-  return getDenom(lowerNum, greaterNum % lowerNum);
+const getDenom = (num1, num2) => {
+  const less = (num1 > num2) ? num2 : num1;
+  const more = (num1 < num2) ? num2 : num1;
+  if (less === 0) return more;
+  return getDenom(less, more % less);
 };
 
-const playGcd = () => {
-  const firstNum = getRandomNumber();
-  const secondNum = getRandomNumber();
-  if (firstNum === 0 || secondNum === 0) return playGcd();
-  const gcd = getDenom(firstNum, secondNum);
-  return cons(`${firstNum} ${secondNum}`, `${gcd}`);
+const getConditions = () => {
+  const num1 = getRandomInteger();
+  const num2 = getRandomInteger();
+  if (num1 === 0 || num2 === 0) return getConditions();
+  const gcd = getDenom(num1, num2);
+  return cons(`${num1} ${num2}`, `${gcd}`);
 };
 
-export default () => startEngine(condition, playGcd);
+export default () => playGame(task, getConditions);

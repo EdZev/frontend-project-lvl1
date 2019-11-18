@@ -1,28 +1,20 @@
-import { l, random, length } from '@hexlet/pairs-data';
 import { cons } from '@hexlet/pairs';
-import startEngine from '../index';
-import { getRandomNumber } from '../utils';
+import playGame from '..';
+import getRandomInteger from '../utils';
 
-const condition = 'What number is missing in the progression?';
+const task = 'What number is missing in the progression?';
 
-const playProgression = () => {
-  const startProgression = getRandomNumber();
-  const stepProgression = getRandomNumber();
-  const listOfPosiblePositions = l(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
-  const positionHiddenElement = random(listOfPosiblePositions);
+const getConditions = () => {
+  const startProgression = getRandomInteger();
+  const stepProgression = getRandomInteger();
+  const lengthProgression = 10;
+  const hiddenPosition = Math.round(getRandomInteger() / 10);
+  const hiddenElement = `${startProgression + stepProgression * hiddenPosition}`;
   const question = [];
-  let hiddenElement = '';
-  let currentItem = startProgression;
-  for (let i = 0; i < length(listOfPosiblePositions); i += 1) {
-    if (i === positionHiddenElement) {
-      hiddenElement = `${currentItem}`;
-      question[i] = ' ..';
-    } else {
-      question[i] = ` ${currentItem}`;
-    }
-    currentItem += stepProgression;
+  for (let i = 0; i < lengthProgression; i += 1) {
+    question[i] = (i === hiddenPosition) ? ' ..' : ` ${startProgression + stepProgression * i}`;
   }
   return cons(`${question}`, hiddenElement);
 };
 
-export default () => startEngine(condition, playProgression);
+export default () => playGame(task, getConditions);

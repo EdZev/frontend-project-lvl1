@@ -2,12 +2,12 @@
 
 [![Build Status](https://travis-ci.org/EdZev/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/EdZev/frontend-project-lvl1)
 
-<a href="https://asciinema.org/a/q3MLvFz4k8czQBKYBN3VYS6bi" target="_blank"><img src="https://asciinema.org/a/q3MLvFz4k8czQBKYBN3VYS6bi.svg" /></a>
+<a href="https://asciinema.org/a/dPnuSGsHdVotIsqBq3Dm3Bae2" target="_blank"><img src="https://asciinema.org/a/dPnuSGsHdVotIsqBq3Dm3Bae2.svg" /></a>
 
-<a href="https://asciinema.org/a/Z9KQdzPwkvgweUotZtKHvW04j" target="_blank"><img src="https://asciinema.org/a/Z9KQdzPwkvgweUotZtKHvW04j.svg" /></a>
+<a href="https://asciinema.org/a/6sbmlcgZDi5nZa75Rl0bhXy12" target="_blank"><img src="https://asciinema.org/a/6sbmlcgZDi5nZa75Rl0bhXy12.svg" /></a>
 
-<a href="https://asciinema.org/a/sd5KrQEeLw20ByVyDYTfzT30Y" target="_blank"><img src="https://asciinema.org/a/sd5KrQEeLw20ByVyDYTfzT30Y.svg" /></a>
+<a href="https://asciinema.org/a/rqXBTTwUV3Vn516nd9lHqQQus" target="_blank"><img src="https://asciinema.org/a/rqXBTTwUV3Vn516nd9lHqQQus.svg" /></a>
 
-<a href="https://asciinema.org/a/3CLmcWHYWHACAno1AKWxDBB5u" target="_blank"><img src="https://asciinema.org/a/3CLmcWHYWHACAno1AKWxDBB5u.svg" /></a>
+<a href="https://asciinema.org/a/Px1aYibjMWuEdbPu4BJchjzWk" target="_blank"><img src="https://asciinema.org/a/Px1aYibjMWuEdbPu4BJchjzWk.svg" /></a>
 
-<a href="https://asciinema.org/a/MOL5edwO2NNsc0BRiIUaV7rZw" target="_blank"><img src="https://asciinema.org/a/MOL5edwO2NNsc0BRiIUaV7rZw.svg" /></a>
+<a href="https://asciinema.org/a/VKUXa2gS37sdW7RBENDz3iD9U" target="_blank"><img src="https://asciinema.org/a/VKUXa2gS37sdW7RBENDz3iD9U.svg" /></a>
