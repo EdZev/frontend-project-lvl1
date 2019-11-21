@@ -4,17 +4,18 @@ import getRandomInteger from '../utils';
 
 const task = 'What number is missing in the progression?';
 
-const getConditions = () => {
+const lengthProgression = 10;
+
+const getGameData = () => {
   const startProgression = getRandomInteger();
   const stepProgression = getRandomInteger();
-  const lengthProgression = 10;
-  const hiddenPosition = Math.round(getRandomInteger() / 10);
-  const hiddenElement = `${startProgression + stepProgression * hiddenPosition}`;
+  const hiddenPosition = getRandomInteger(0, lengthProgression);
+  const answer = String(startProgression + stepProgression * hiddenPosition);
   const question = [];
   for (let i = 0; i < lengthProgression; i += 1) {
     question[i] = (i === hiddenPosition) ? ' ..' : ` ${startProgression + stepProgression * i}`;
   }
-  return cons(`${question}`, hiddenElement);
+  return cons(String(question), answer);
 };
 
-export default () => playGame(task, getConditions);
+export default () => playGame(task, getGameData);

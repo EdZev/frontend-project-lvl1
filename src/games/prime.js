@@ -4,7 +4,7 @@ import getRandomInteger from '../utils';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const checkPrime = (num) => {
+const isPrime = (num) => {
   const firstPrime = 2;
   const biggestDivisor = num / 2;
   if (num < firstPrime) return false;
@@ -14,10 +14,10 @@ const checkPrime = (num) => {
   return true;
 };
 
-const getConditions = () => {
-  const numberForQuestion = getRandomInteger();
-  const answer = (checkPrime(numberForQuestion)) ? 'yes' : 'no';
-  return cons(`${numberForQuestion}`, answer);
+const getGameData = () => {
+  const question = getRandomInteger();
+  const answer = (isPrime(question)) ? 'yes' : 'no';
+  return cons(`${question}`, answer);
 };
 
-export default () => playGame(task, getConditions);
+export default () => playGame(task, getGameData);

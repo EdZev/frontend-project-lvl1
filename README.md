@@ -2,12 +2,13 @@
 
 [![Build Status](https://travis-ci.org/EdZev/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/EdZev/frontend-project-lvl1)
 
-<a href="https://asciinema.org/a/dPnuSGsHdVotIsqBq3Dm3Bae2" target="_blank"><img src="https://asciinema.org/a/dPnuSGsHdVotIsqBq3Dm3Bae2.svg" /></a>
+Welcome!
 
-<a href="https://asciinema.org/a/6sbmlcgZDi5nZa75Rl0bhXy12" target="_blank"><img src="https://asciinema.org/a/6sbmlcgZDi5nZa75Rl0bhXy12.svg" /></a>
+Use `make install` to install the game from source, `make start` to see the main menu.
 
-<a href="https://asciinema.org/a/rqXBTTwUV3Vn516nd9lHqQQus" target="_blank"><img src="https://asciinema.org/a/rqXBTTwUV3Vn516nd9lHqQQus.svg" /></a>
-
-<a href="https://asciinema.org/a/Px1aYibjMWuEdbPu4BJchjzWk" target="_blank"><img src="https://asciinema.org/a/Px1aYibjMWuEdbPu4BJchjzWk.svg" /></a>
-
-<a href="https://asciinema.org/a/VKUXa2gS37sdW7RBENDz3iD9U" target="_blank"><img src="https://asciinema.org/a/VKUXa2gS37sdW7RBENDz3iD9U.svg" /></a>
+The list of games:<br />
+1) brain-even - Answer "yes" if the number is even, otherwise answer "no".<br />
+2) brain-calc - What is the result of the expression?<br />
+3) brain-gcd - Find the greatest common divisor of given numbers<br />
+4) brain-progression - What number is missing in the progression?<br />
+5) brain-prime - Answer "yes" if given number is prime. Otherwise answer "no". <br />

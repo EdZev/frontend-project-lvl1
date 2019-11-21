@@ -5,6 +5,8 @@ import getRandomInteger from '../utils';
 
 const task = 'What is the result of the expression?';
 
+const operations = l('+', '-', '*');
+
 const makeCalc = (num1, num2, sign) => {
   switch (sign) {
     case '+':
@@ -16,12 +18,13 @@ const makeCalc = (num1, num2, sign) => {
   }
 };
 
-const getConditions = () => {
+const getGameData = () => {
   const operand1 = getRandomInteger();
   const operand2 = getRandomInteger();
-  const listOperations = l('+', '-', '*');
-  const operation = random(listOperations);
-  return cons(`${operand1} ${operation} ${operand2}`, `${makeCalc(operand1, operand2, operation)}`);
+  const operation = random(operations);
+  const question = `${operand1} ${operation} ${operand2}`;
+  const answer = `${makeCalc(operand1, operand2, operation)}`;
+  return cons(question, answer);
 };
 
-export default () => playGame(task, getConditions);
+export default () => playGame(task, getGameData);
