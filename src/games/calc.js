@@ -22,8 +22,8 @@ const getGameData = () => {
   const operand1 = getRandomInteger();
   const operand2 = getRandomInteger();
   const operation = random(operations);
-  const question = `${operand1} ${operation} ${operand2}`;
-  const answer = `${makeCalc(operand1, operand2, operation)}`;
+  const question = [operand1, operation, operand2].join('');
+  const answer = makeCalc(operand1, operand2, operation).toString();
   return cons(question, answer);
 };
 

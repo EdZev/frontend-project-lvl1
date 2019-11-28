@@ -9,13 +9,13 @@ const lengthProgression = 10;
 const getGameData = () => {
   const startProgression = getRandomInteger();
   const stepProgression = getRandomInteger();
-  const hiddenPosition = getRandomInteger(0, lengthProgression);
-  const answer = String(startProgression + stepProgression * hiddenPosition);
+  const hiddenElementPosition = getRandomInteger(0, lengthProgression - 1);
+  const answer = startProgression + stepProgression * hiddenElementPosition;
   const question = [];
   for (let i = 0; i < lengthProgression; i += 1) {
-    question[i] = (i === hiddenPosition) ? ' ..' : ` ${startProgression + stepProgression * i}`;
+    question[i] = (i === hiddenElementPosition) ? ' ..' : startProgression + stepProgression * i;
   }
-  return cons(String(question), answer);
+  return cons(question.join(), answer.toString());
 };
 
 export default () => playGame(task, getGameData);

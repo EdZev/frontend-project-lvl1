@@ -15,8 +15,8 @@ const getCommonDivisor = (num1, num2) => {
 const getGameData = () => {
   const num1 = getRandomInteger(1, 100);
   const num2 = getRandomInteger(1, 100);
-  const gcd = getCommonDivisor(num1, num2);
-  return cons(`${num1} ${num2}`, `${gcd}`);
+  const gcd = getCommonDivisor(num1, num2).toString();
+  return cons([num1, num2].join(), gcd);
 };
 
 export default () => playGame(task, getGameData);

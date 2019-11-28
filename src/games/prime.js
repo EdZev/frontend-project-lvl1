@@ -17,7 +17,7 @@ const isPrime = (num) => {
 const getGameData = () => {
   const question = getRandomInteger();
   const answer = (isPrime(question)) ? 'yes' : 'no';
-  return cons(`${question}`, answer);
+  return cons(question, answer);
 };
 
 export default () => playGame(task, getGameData);

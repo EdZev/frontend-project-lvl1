@@ -4,11 +4,22 @@
 
 Welcome!
 
-Use `make install` to install the game from source, `make start` to see the main menu.
+This is an educational project - Brain Games.
+The project contains five games:
+1) brain-even - In this game it is necessary to answer whether the represented number is even.<br />
+2) brain-calc - In this game, it is necessary to calculate the result of expression.<br />
+3) brain-gcd - In this game, it is necessary to find the greatest common divisor of given numbers<br />
+4) brain-progression - In this game it is necessary to answer what number is missing in the progression.<br />
+5) brain-prime -  In this game you must answer whether the number represented is prime. <br />
 
-The list of games:<br />
-1) brain-even - Answer "yes" if the number is even, otherwise answer "no".<br />
-2) brain-calc - What is the result of the expression?<br />
-3) brain-gcd - Find the greatest common divisor of given numbers<br />
-4) brain-progression - What number is missing in the progression?<br />
-5) brain-prime - Answer "yes" if given number is prime. Otherwise answer "no". <br />
+Install:
+`make publish`
+then
+`npm link`
+
+Use:
+`brain-games` to see the main menu.
+
+Game example:
+
+![](play_games.gif)
