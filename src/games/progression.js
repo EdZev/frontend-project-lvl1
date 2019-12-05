@@ -7,13 +7,13 @@ const task = 'What number is missing in the progression?';
 const lengthProgression = 10;
 
 const getGameData = () => {
-  const startProgression = getRandomInteger();
-  const stepProgression = getRandomInteger();
+  const start = getRandomInteger();
+  const step = getRandomInteger();
   const hiddenElementPosition = getRandomInteger(0, lengthProgression - 1);
-  const answer = startProgression + stepProgression * hiddenElementPosition;
+  const answer = start + step * hiddenElementPosition;
   const question = [];
   for (let i = 0; i < lengthProgression; i += 1) {
-    question[i] = (i === hiddenElementPosition) ? ' ..' : startProgression + stepProgression * i;
+    question[i] = (i === hiddenElementPosition) ? '..' : start + step * i;
   }
   return cons(question.join(), answer.toString());
 };

@@ -13,8 +13,10 @@ const makeCalc = (num1, num2, sign) => {
       return num1 + num2;
     case '-':
       return num1 - num2;
-    default:
+    case '*':
       return num1 * num2;
+    default:
+      return null;
   }
 };
 
@@ -22,7 +24,7 @@ const getGameData = () => {
   const operand1 = getRandomInteger();
   const operand2 = getRandomInteger();
   const operation = random(operations);
-  const question = [operand1, operation, operand2].join('');
+  const question = `${operand1}${operation}${operand2}`;
   const answer = makeCalc(operand1, operand2, operation).toString();
   return cons(question, answer);
 };
