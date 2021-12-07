@@ -5,6 +5,9 @@
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
