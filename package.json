@@ -2,8 +2,6 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/EdZev/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/EdZev/frontend-project-lvl1/actions)",
-  "type": "module",
-  "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
@@ -19,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/EdZev/frontend-project-lvl1/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/EdZev/frontend-project-lvl1#readme"
 }
