@@ -5,6 +5,28 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-[![asciicast](https://asciinema.org/a/454795.svg)](https://asciinema.org/a/454795)
+Welcome!
 
-[![asciicast](https://asciinema.org/a/454830.svg)](https://asciinema.org/a/454830)
+This is an educational project - Brain Games.
+The project contains five games:
+1) brain-even - In this game it is necessary to answer whether the represented number is even.<br />
+2) brain-calc - In this game, it is necessary to calculate the result of expression.<br />
+3) brain-gcd - In this game, it is necessary to find the greatest common divisor of given numbers<br />
+4) brain-progression - In this game it is necessary to answer what number is missing in the progression.<br />
+5) brain-prime -  In this game you must answer whether the number represented is prime. <br />
+
+Install:
+`make install`
+`make publish`
+`npm link`
+
+Use:
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+
+Game example:
+
+![](play_games.gif)
