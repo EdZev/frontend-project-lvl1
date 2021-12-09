@@ -13,7 +13,7 @@ const getCommonDivisor = (num1, num2) => {
 const getGameData = () => {
   const num1 = getRandomInteger();
   const num2 = getRandomInteger();
-  const question = [num1, num2].join();
+  const question = [num1, num2].join(' ');
   const correctAnswer = getCommonDivisor(num1, num2).toString();
   return { question, correctAnswer };
 };
