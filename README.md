@@ -21,11 +21,11 @@ Install:
 `npm link`
 
 Use:<br />
-brain-even<br />
-brain-calc<br />
-brain-gcd<br />
-brain-progression<br />
-brain-prime
+`brain-even`<br />
+`brain-calc`<br />
+`brain-gcd`<br />
+`brain-progression`<br />
+`brain-prime`
 
 Game example:
 
