@@ -9,8 +9,6 @@ export default (task, getGameData) => {
   console.log(`Hello! ${userName}!\r\n`);
   for (let i = 0; i < roundsCount; i += 1) {
     const { question, correctAnswer } = getGameData();
-    //const question = car(gameData);
-    //const correctAnswer = cdr(gameData);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer !== userAnswer) {
