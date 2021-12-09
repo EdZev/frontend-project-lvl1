@@ -20,7 +20,7 @@ Install:
 `make publish`
 `npm link`
 
-Use:
+Use:<br />
 brain-even<br />
 brain-calc<br />
 brain-gcd<br />
